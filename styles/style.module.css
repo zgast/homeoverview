@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.card {
+    margin: 0.2%;
+}

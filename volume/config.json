@@ -1,0 +1,14 @@
+{
+  "logo":{
+     "customLogo":false,
+     "logoURL":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+  },
+  "sites":[
+     {
+        "name":"example",
+        "url":"http://example.local/",
+        "description":"",
+        "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+     }
+  ]
+}
