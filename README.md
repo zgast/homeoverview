@@ -40,6 +40,12 @@ sudo docker run -d --name homeoverview -p 80:3000 -v /docker/homeoverview:/homeo
         "url":"http://example.local/",
         "description":"",
         "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+     },
+     {
+        "name":"example",
+        "url":"http://example.local/",
+        "description":"",
+        "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
      }
   ]
 }
