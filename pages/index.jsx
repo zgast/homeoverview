@@ -5,7 +5,7 @@ import {Button, Card, CardActionArea, CardContent, CardMedia, Typography} from "
 
 
 
-export default function index({sites, logoProp}) {
+export default function Index({sites, logoProp}) {
     return (
         <div>
             <div className={styles.header}>
@@ -27,6 +27,7 @@ export default function index({sites, logoProp}) {
                                         height="160"
                                         image={site.logo}
                                         alt="green iguana"
+                                        style={{objectFit:"contain",width:"100%"}}
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">

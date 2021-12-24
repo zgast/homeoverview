@@ -1,4 +1,5 @@
 {
+   
   "logo":{
      "customLogo":false,
      "logoURL":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
@@ -8,7 +9,7 @@
         "name":"example",
         "url":"http://example.local/",
         "description":"",
-        "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+        "logo":"https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fstatic.vecteezy.com%2Fpacks%2Fmedia%2Fcomponents%2Fglobal%2Fsearch-explore-nav%2Fimg%2Fvectors%2Fterm-bg-1-666de2d941529c25aa511dc18d727160.jpg&sp=1640358005Tcc3acb8b6d9a7ff2c8d819234bf2a695e476f234e1c6d83467df22df03ea891e"
      }
   ]
 }
