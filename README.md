@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">homeoverview</h1>
 
-## Getting Started
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/zgast/homeoverview)
+![GitHub all releases](https://img.shields.io/github/downloads/zgast/homeoverview/total)
+![GitHub contributors](https://img.shields.io/github/contributors/zgast/homeoverview)
+![GitHub last commit](https://img.shields.io/github/last-commit/zgast/homeoverview)
+![GitHub issues](https://img.shields.io/github/issues-raw/zgast/homeoverview)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/zgast/homeoverview)
+![GitHub language count](https://img.shields.io/github/languages/count/zgast/homeoverview)
+![views](https://visitor-badge.glitch.me/badge?page_id=zgast.homeoverview)
 
-First, run the development server:
+homeoverview is a Website, that displays all of your locally host websites, to have an nice overview on them,
+it is easily configurable and it is build for using it with docker.
 
+## Install with Docker
 ```bash
-npm run dev
-# or
-yarn dev
+# create volume and config
+mkdir /docker/homeoverview/
+cd /docker/homeoverview/
+touch config.json
+
+# edit the config
+vim config.json # use the example config from below and edit it to your wishes
+
+# start container
+sudo docker run -d --name homeoverview -p 80:3000 -v /docker/homeoverview:/homeoverview/volume/ zgast/homeoverview:latest
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### example config
+```json
+{
+  
+  "logo":{
+     "customLogo":false,
+     "logoURL":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+  },
+  "sites":[
+     {
+        "name":"example",
+        "url":"http://example.local/",
+        "description":"",
+        "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+     },
+     {
+        "name":"example",
+        "url":"http://example.local/",
+        "description":"",
+        "logo":"https://www.crn.ru/upload/iblock/0ce/Synology_logo_Standard.png"
+     }
+  ]
+}
+```
+**logo**:   you can enable customLogo with an true and the logo gets replaced with the URL from logoURL
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**sites**:  those are the cards and the websites, you can enter as much as you want, if you leave the description empty, it will 
+            be replaced with an example
+            
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Install without Docker
+### yarn
+```bash
+# clone repo
+git clone https://github.com/zgast/homeoverview/
+cd homeoverview
+# edit the config
+vim ./volume/config.json
+# build and start it
+yarn build
+yarn start
+```
+### npm
+```bash
+# clone repo
+git clone https://github.com/zgast/homeoverview/
+cd homeoverview
+# edit the config
+vim ./volume/config.json
+# build and start it
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Look
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](https://github.com/zgast/homeoverview/blob/main/.screens/Screenshot-20211224124046-2560x1365.png?raw=true)
